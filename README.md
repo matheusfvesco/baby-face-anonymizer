@@ -1,6 +1,6 @@
 # Baby Faces Anonymizer
 
-An end to end project to ingest, annotate, train and deploy a model for anonymizing baby faces 
+An end to end project for ingesting, annotating, training and deploying a model for anonymizing baby faces 
 
 ## 0. Setup
 
