@@ -11,5 +11,7 @@ wheels/
 .venv
 
 .env
-/data
-
+/data/*
+!/data/queries.txt
+/weights
+/GroundingDINO
