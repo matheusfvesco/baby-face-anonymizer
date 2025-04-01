@@ -30,7 +30,8 @@ def download_image(url, filename, save_dir):
                 f.write(chunk)
         return True
     except Exception as e:
-        #tqdm.write(f"Error thrown: {e}")
+        e
+        # tqdm.write(f"Error thrown: {e}")
         return False
 
 
@@ -54,9 +55,10 @@ def main(query_path, download_path):
                 ).execute()
                 return result.get('items', [])
             except Exception as e:
-                #tqdm.write(f"Error thrown: {e}")
+                e
+                # tqdm.write(f"Error thrown: {e}")
                 return []
-        
+
         idx = 0
         main_pbar = tqdm(terms)
         for term in main_pbar:
@@ -80,7 +82,7 @@ def main(query_path, download_path):
 
             os.remove(file1)
             break
-    
+
     # ensures ext is the same
     for file in SAVE_DIR.iterdir():
         if file.suffix == ".png":
@@ -91,7 +93,7 @@ def main(query_path, download_path):
             img.save(new_path)
         except Exception as e:
             print(e)
-            os.remove(file) # remove corrupted file
+            os.remove(file)  # remove corrupted file
             continue
         os.remove(file)
 
