@@ -15,3 +15,4 @@ wheels/
 !/data/queries.txt
 /weights
 /GroundingDINO
+/output
