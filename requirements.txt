@@ -3,6 +3,12 @@ google-api-python-client==2.166.0
 google-auth-httplib2==0.2.0
 googleapis-common-protos==1.69.2
 httplib2==0.22.0
+numpy==1.26.4
+opencv-python==4.11.0.86
 proto-plus==1.26.1
+py-cpuinfo==9.0.0
 python-dotenv==1.1.0
+seaborn==0.13.2
+ultralytics==8.3.100
+ultralytics-thop==2.0.14
 uritemplate==4.1.1
