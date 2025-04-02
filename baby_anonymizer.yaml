@@ -1,0 +1,7 @@
+path: ../output/data
+train: train/images
+val: val/images
+
+names:
+    0: eye
+    1: mouth
