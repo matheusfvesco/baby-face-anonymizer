@@ -1,13 +1,15 @@
 from pathlib import Path
 import argparse
 
+
 def main(images_path, labels_path, output_path, train_ratio):
     images_path = Path(images_path)
     labels_path = Path(labels_path)
     output_path = Path(output_path)
 
     total_labels = list(labels_path.glob("*.txt"))
-    total_images = [images_path / f"{label.stem}.png" for label in total_labels]
+    total_images = [images_path /
+                    f"{label.stem}.png" for label in total_labels]
 
     num_train = int(len(total_labels) * train_ratio)
     train_labels = total_labels[:num_train]
@@ -41,6 +43,7 @@ def main(images_path, labels_path, output_path, train_ratio):
         label_out = val_labels_output / label.name
         image_out.symlink_to(image.resolve())
         label_out.symlink_to(label.resolve())
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
