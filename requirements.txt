@@ -19,6 +19,7 @@ numpy==1.26.4
 opencv-python==4.11.0.86
 proto-plus==1.26.1
 py-cpuinfo==9.0.0
+pyav==14.2.1
 python-dotenv==1.1.0
 python-multipart==0.0.20
 rich==14.0.0

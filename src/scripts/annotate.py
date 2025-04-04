@@ -4,7 +4,7 @@ import argparse
 from groundingdino.util.inference import load_model, load_image, predict
 from tqdm import tqdm
 
-CLASSES = ["eye", "mouth"]
+CLASSES = ["face"]
 CLASS_IDS = {class_name: idx for idx, class_name in enumerate(CLASSES)}
 
 WEIGHTS_PATH = "weights/groundingdino_swint_ogc.pth"
@@ -34,7 +34,7 @@ def infer(image_path):
 
     image_source, image = load_image(image_path)
 
-    TEXT_PROMPT = "mouth, eye"
+    TEXT_PROMPT = "face"
     BOX_TRESHOLD = 0.30
     TEXT_TRESHOLD = 0.25
 
@@ -58,9 +58,9 @@ def main(image_root, save_root):
     for image_path in pbar:
         pbar.set_description(image_path.name)
         boxes, _, phrases = infer(image_path)
-        if len(phrases) < 3:
+        #if len(phrases) < 3:
             # os.remove(image_path)
-            continue
+        #    continue
         save_yolo_annotation(image_path, save_root, boxes, phrases)
 
 

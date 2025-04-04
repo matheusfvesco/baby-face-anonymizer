@@ -87,7 +87,7 @@ docker build -t baby-face-anonymizer .
 
 #### Run the container:
 ```bash
-docker run --gpus all -p 8000:8000 baby-face-anonymizer:latest
+docker run -p 8000:8000 baby-face-anonymizer:latest
 ```
 Access the API at: `http://localhost:8000/`
 
@@ -104,6 +104,16 @@ sudo apt update && sudo apt install -y ffmpeg
 ```bash
 fastapi run api.py
 ```
+
+## Usage
+
+The API have 2 POST endpoints:
+
+`/anonymize/image`: receives a image file and returns a png image file as bytes
+
+`/anonymize/image`: receives a mp4 video file and returns a mp4 video file as bytes
+
+Examples on how to make the request and receive the files are provided in both `request_example.py` and `vid_request_example.py`
 
 ## Additional Notes
 

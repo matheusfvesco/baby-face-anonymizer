@@ -1,12 +1,12 @@
 import requests
 
-url = "http://localhost:8000/anonymize/image"
-files = {"file": open("data/example.jpg", "rb")}
+url = "http://localhost:8000/anonymize/video"
+files = {"file": open("baby-crying.mp4", "rb")}
 
 response = requests.post(url, files=files)
 
 if response.status_code == 200:
-    with open("anonymized_image.png", "wb") as f:
+    with open("anonymized_video.mp4", "wb") as f:
         f.write(response.content)
 else:
     print(f"Error: {response.text}")
