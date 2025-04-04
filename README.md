@@ -87,7 +87,7 @@ docker build -t baby-face-anonymizer .
 
 #### Run the container:
 ```bash
-docker run --gpus all -p 8000:8000 baby-face-anonymizer:latest
+docker run -p 8000:8000 baby-face-anonymizer:latest
 ```
 Access the API at: `http://localhost:8000/`
 
