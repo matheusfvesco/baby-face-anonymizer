@@ -105,6 +105,16 @@ sudo apt update && sudo apt install -y ffmpeg
 fastapi run api.py
 ```
 
+## Usage
+
+The API have 2 POST endpoints:
+
+`/anonymize/image`: receives a image file and returns a png image file as bytes
+
+`/anonymize/image`: receives a mp4 video file and returns a mp4 video file as bytes
+
+Examples on how to make the request and receive the files are provided in both `request_example.py` and `vid_request_example.py`
+
 ## Additional Notes
 
 - For GPU acceleration, ensure you have NVIDIA drivers installed and Docker configured with GPU support
