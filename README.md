@@ -1,10 +1,9 @@
 # Baby Faces Anonymizer
+[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 
 <img src="https://github.com/matheusfvesco/baby-face-anonymizer/raw/main/assets/anonymized_image.png" alt="Anonymized Image Example" width="500"/>
 
-An end-to-end pipeline for ingesting, annotating, training, and deploying a model to anonymize baby faces in images.
-
-[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
+An end-to-end pipeline for ingesting, annotating, training, and deploying a model to anonymize baby faces in images. The project is intended to be used on tasks involved in recording videos os babies for healthcare products or projects.
 
 ## Table of Contents
 1. [Prerequisites](#1-prerequisites)
