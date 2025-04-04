@@ -1,6 +1,6 @@
 import requests
 
-url = "http://localhost:8000/anonymize/"
+url = "http://localhost:8000/anonymize/image"
 files = {"file": open("data/example.jpg", "rb")}
 
 response = requests.post(url, files=files)
